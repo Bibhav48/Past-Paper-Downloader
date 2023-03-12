@@ -8,7 +8,7 @@ import datetime
 from pygame import mixer
 
 mixer.init()
-notifier_dir = r"Alka Yagnik - Agar Tum Saath Ho.mp3"
+notifier_dir = "https://www.youtube.com/watch?v=z59Im3m7jCE"
 mixer.music.load(notifier_dir)
 parser = argparse.ArgumentParser()
 parser.add_argument('-s', '--subject', required=True, type=str, action='store')
