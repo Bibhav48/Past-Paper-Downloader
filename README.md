@@ -52,7 +52,7 @@ To download past papers for Physics for the year 2022, run the following command
 ```py
 python past_paper_downloder.py -s Physics -y 2022
 ```
-To download only paper type `m1` and `m2` for Maths for the year 2015, run the following command:
+To download only paper type `qp` and `ms` for Maths for the year 2015, run the following command:
 ```py
 python past_paper_downloder.py -s Maths -y 2015 -pt qp,ms
 ```
