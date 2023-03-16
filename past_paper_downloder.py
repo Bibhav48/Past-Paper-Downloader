@@ -35,7 +35,7 @@ if any(pt in args.paper_type for pt in ["sp","sci","sm"]) and "Specimen" not in 
 if "," in args.subject:
     args.subject = args.subject.split(",")
 elif "*" in args.subject:
-    args.subject = ["Physics", "Chemistry", "Computer" , "English", "Maths", "EGP"]
+    args.subject = ["Physics", "Chemistry", "Computer", "Maths"]
 else:
     args.subject = [args.subject]
     
