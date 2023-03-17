@@ -14,7 +14,6 @@ This is a Python script to download past exam papers from the [GCE Guide](https:
 - [Notes](#notes)
 
 ## Requirements
-
 * pymsgbox
 * beautifulsoup4
 * requests
@@ -23,16 +22,24 @@ This is a Python script to download past exam papers from the [GCE Guide](https:
 * termcolor
 * pygame
 
+ ```
+ pip install -r requirements.txt
+ ```
+
 
 ## Install
 
 To use this script, follow these steps:
 
 1. Clone the repository or download the `past_paper_downloader.py` file.
-2. Open a terminal and navigate to the directory containing the file.
-3. Run the script using the command `python past_paper_downloader.py`.
-4. Follow the prompts to select the year and faculty for which you want to download past papers.
-5. The script will download all available past papers for the selected year and faculty and save them in a folder named `Past Papers` in the same directory as the script.
+2. Download requirements from `requirements.txt`
+ ```
+ pip install -r requirements.txt
+ ```
+3. Open a terminal and navigate to the directory containing the file.
+4. Run the script using the command `python past_paper_downloader.py`.
+5. Follow the prompts to select the year and faculty for which you want to download past papers.
+6. The script will download all available past papers for the selected year and faculty and save them in a folder named `Past Papers` in the directory Documents.
 
 ## Usage
 ```py
