@@ -54,7 +54,10 @@ def download(down_path, filename):
     if not os.path.isfile(f'{down_path}/{filename}'):
         with open(f'{down_path}/{filename}', 'wb') as f:
             f.write(requests.get(file_link).content)
-    cprint(f"Downloaded {filename}", 'green')
+        cprint(f"Downloaded {filename}", 'green')
+    else:
+        cprint(f"Downloaded {filename}", 'blue')
+        
 
     return True
 
