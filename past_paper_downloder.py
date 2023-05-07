@@ -16,22 +16,26 @@ parser.add_argument('-y', '--year', required=True, action='store', help="Select 
 parser.add_argument('-pt', '--paper_type', required=False, type=str, action='store', help="Leave empty to download all")
 
 args = parser.parse_args()
-if args.year.isdigit():
-    years = [args.year]
-else:
-    year_range = args.year.strip().split("-")
-    years = list(range(int(year_range[0]),int(year_range[1])+1))
 
 if args.paper_type:
     if "," in args.paper_type:
         args.paper_type = args.paper_type.split(",")
     else:
         args.paper_type = [args.paper_type]
+        
+if any(char.isdigit() for char in args.year) and ("-" in args.year):
+    year_range = args.year.strip().split("-")
+    years = list(range(int(year_range[0]),int(year_range[1])+1))
+else:
+    years = [args.year]
+
+if any(pt in args.paper_type for pt in ["sp","sci","sm"]) and "Specimen" not in years:
+    years += ["Specimen"]
 
 if "," in args.subject:
     args.subject = args.subject.split(",")
 elif "*" in args.subject:
-    args.subject = ["Physics", "Chemistry", "Computer" , "English", "Maths", "EGP"]
+    args.subject = ["Physics", "Chemistry", "Computer", "Maths"]
 else:
     args.subject = [args.subject]
     
